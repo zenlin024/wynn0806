@@ -1,0 +1,2086 @@
+<!DOCTYPE html>
+<html lang="zh-tw">
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>永利娛樂</title>
+  <link rel="stylesheet" href="css/style.css" />
+  <link
+    rel="stylesheet"
+    href="https://unpkg.com/swiper@8/swiper-bundle.min.css"
+  />
+  <link
+    rel="stylesheet"
+    href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css"
+  />
+  <link type="text/css" rel="stylesheet" href="style/main.css">
+  <link type="text/css" rel="stylesheet" href="style/style.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="js/jquery-1.8.3.min.js"></script>
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+</head>
+
+<body>
+  
+    <header class="header" id="myHeader">
+      <div class="h-top">
+        <div class="h-top-g container">
+          <!-- <div class="date-time" >
+            <div class="date_time-icon">
+              <img src="img/date_time-icon.png" alt="">
+            </div>
+            <div id="current_date"></div>
+          </div> -->
+          <!--   wynn datetime -->
+          <!-- <div class="date-time">
+            <div class="date_time-icon">
+              <img src="img/date_time-icon.png" alt="">
+            </div>
+            <div >
+              美東時間 - <span id="current_date"></span>
+            </div>
+          </div> -->
+          <div class="nav-top-g">
+            <div class="top-lang">
+              <span class="lang-wrap">
+                <div id="ele-lang-wrap" class="ele-lang-wrap">
+                  <div class="ele-lang-title ele-lang-option" >
+                    简体中文<span class="ele-lang-flag ele-lang-zh-tw"></span>
+                  </div>
+                  <div id="ele-lang-group" class="ele-lang-group w120" >
+                    <a
+                      href="img/lang/cn.png"
+                      target="mem_index"
+                      title="繁體中文"
+                      class="ele-lang-option ele-lang-current"
+                      >繁體中文<span
+                        class="ele-lang-flag ele-lang-zh-tw"
+                      ></span></a
+                    ><a
+                      href="img/lang/cn.png"
+                      target="mem_index"
+                      title="简体中文"
+                      class="ele-lang-option"
+                      >简体中文<span
+                        class="ele-lang-flag ele-lang-zh-cn"
+                      ></span></a
+                    ><a href="img/lang/cn.png" target="mem_index" title="English" class="ele-lang-option">English<span class="ele-lang-flag ele-lang-en"></span
+                    ></a>
+                  </div>
+                </div>
+                <script>
+                  $(function () {
+                    var ele_lang_group = $("<div>")
+                        .append($("#ele-lang-group"))
+                        .html(),
+                      $miBody = $("body"),
+                      lang_group,
+                      langUp = "" || "",
+                      /* 改為從下往上開 */ langUpY = "" || 0,
+                      /* 從下往上開微調的距離 */ listWidth = "",
+                      /* 指定選單寬度 */ listPosition = "" || "left";
+                    /* 選單對齊方式 */ $miBody.prepend(ele_lang_group);
+                    lang_group = $("#ele-lang-group");
+                    /* 設定group 的寬度 */ lang_group.css(
+                      "width",
+                      listWidth
+                        ? listWidth
+                        : $("#ele-lang-wrap").width() -
+                            (lang_group.outerWidth() - lang_group.width())
+                    );
+                    var langAutoClose = function () {
+                      langCloseTimer = setTimeout(function () {
+                        lang_group.stop().slideUp("fast");
+                      }, 1000);
+                    };
+                    $("#ele-lang-wrap")
+                      .on("click", function () {
+                        var offset = $(this).offset();
+                        var center_set = $miBody.width() - $("body").width();
+                        center_set = center_set > 0 ? center_set / 2 : 0;
+                        var listHeight = $("#ele-lang-group").height(),
+                          obj_Left = offset.left + center_set,
+                          obj_Top = offset.top + $(this).height();
+                        if (langUp === "Y") {
+                          obj_Top = $(window).height() - offset.top + +langUpY;
+                        }
+                        var widthDiff = $(this).width() - lang_group.width();
+                        if (widthDiff !== 0) {
+                          if (listPosition === "center") {
+                            obj_Left = obj_Left + widthDiff / 2;
+                          }
+                          if (listPosition === "right") {
+                            obj_Left = obj_Left + widthDiff;
+                          }
+                        }
+                        var langStyle = { left: obj_Left };
+                        if (langUp === "Y") {
+                          langStyle.bottom = obj_Top;
+                        } else {
+                          langStyle.top = obj_Top;
+                        }
+                        if (lang_group.is(":hidden")) {
+                          lang_group
+                            .stop()
+                            .slideDown("fast")
+                            .css(langStyle)
+                            .on("mouseenter", function () {
+                              clearTimeout(langCloseTimer);
+                              $(this).stop(true, true).slideDown("100");
+                            });
+                        } else {
+                          lang_group.stop().slideUp("fast");
+                        }
+                      })
+                      .on("mouseleave", function () {
+                        langAutoClose();
+                      })
+                      .on("mouseenter", function () {
+                        if (typeof langCloseTimer != "undefined") {
+                          clearTimeout(langCloseTimer);
+                        }
+                      });
+                    lang_group.on("mouseleave", function () {
+                      langAutoClose();
+                    });
+                  });
+                </script></span
+              >
+            </div>
+            <div class="top-hot-link">
+              <nav>
+                  <a href="#">18狂欢日 </a>
+                  <span style="padding: 0 2px;"> | </span> 
+                  <a href="#"> 下载【4005刘览器】</a> 
+                  <span style="padding: 0 2px;"> | </span> 
+                  <a href="#"> 借呗「全民福利」 </a> 
+                  <span style="padding: 0 2px;"> | </span> 
+                  <a href="#"> 每天签到「独家」 </a>
+                  <span style="padding: 0 2px;"> |</span> 
+                  <a href="#"> 超级VIP</a>
+              </nav>
+            </div>
+          </div>
+
+          <div>
+            <div class="header-top-right-box">
+              <div class="login-wrap">
+                <form
+                  name="LoginForm"
+                  id="LoginForm"
+                  action="/infe/login/login"
+                  method="POST"
+                  onsubmit="return preventLoginDefault(event);"
+                  style="display: flex;"
+                >
+                  <input type="hidden" name="uid2" value="guest" />
+                  <p class="login-unit login-unit-user">
+                    <!-- <label
+                      name="username"
+                      for="username"
+                      class="login-placeholder"
+                      style="opacity: 1"
+                      >帳號</label> -->
+                    <div class="login-icon" >
+                      <img  src="img/user-icon.png" alt="" style="width: 18px;height: 18px;">
+                    </div>
+                    <div class="inputuser">
+                        <input
+                        name="username"
+                        type="text"
+                        size="12"
+                        id="username"
+                        title="請輸入4-15個字元, 僅可輸入英文字母以及數字的組合!!"
+                        maxlength="16"
+                        class="login-input login-acc"
+                        tabindex="1"
+                        pattern="[a-zA-Z0-9]{4,15}"
+                        required=""
+                        placeholder="帐号"
+                        />
+                        <span id="js-acc-unicode" class="acc-unicode">@634</span>
+                    </div>
+                  </p>
+                  <p class="login-unit login-unit-user">
+                    <!-- <label
+                      name="username"
+                      for="username"
+                      class="login-placeholder"
+                      style="opacity: 1"
+                      >帳號</label> -->
+                      <div class="login-icon" >
+                        <img  src="img/pw-icon.png" alt="" style="width: 18px;height: 18px;">
+                      </div> 
+                    <div class="login-unit login-unit-pwd">
+                        <input
+                        name="passwd"
+                        type="password"
+                        autocomplete="off"
+                        size="13"
+                        id="passwd"
+                        title="請填寫 6-12 位大小寫英數字"
+                        maxlength="13"
+                          class="login-input"
+                          tabindex="2"
+                          pattern="[a-zA-Z0-9]{6,13}"
+                          required=""
+                          placeholder="密码"
+                        />
+                        <span id="js-acc-unicode" class="acc-unicode-pw">
+                          <img src="img/eye-close-icon.png" alt="">
+                        </span>
+                    </div>
+                  </p>
+                  <!-- <input class="login-submit" name="Submit" type="submit" value="登入" tabindex="4"/> -->
+                  <!-- <input class="login-submit" type="submit"/> -->
+                  <button class="login-submit" type="submit">
+                    <div class="login-submit-img">
+                      <img src="img/btn_login.png" alt="">
+                    </div>
+                  </button>
+                  <!-- <input class="signup" name="signup" type="button" value="註冊"/> -->
+                  <div class="signup_btn">
+                      <div class="signup_btn-img">
+                        <img src="img/btn_joinus.png" alt="">
+                      </div>
+                    </div>
+                  <a class="header-join" href="###" onclick="f_com.getPager('_self','/entrance/page/registermember');">忘记密码</a>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="h-main">
+        <div class="container">
+          <!-- logotest dropdown -->
+          <div class="h-main-logo">
+            <li class="nav-item logo-dropdown">
+              <div class="o-nav-item logo">
+                <a href="index.html">
+                  <img src="img/main-logo.png" alt="" />
+                </a>
+              </div>
+              <div class="submenu">
+                  <ul class="submenu-items">
+                    <li class="dp-top-line">
+                      <img src="img/triangle-icon.png" alt="">
+                    </li>
+                      <div class="d-logo-item-g">
+                        <div class="d-logo-item d01">
+                          <a href="#">
+                            <div class="d-logo-img d01"></div>
+                            <div class="d-logo-text">首页</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d02">
+                          <a href="">
+                            <div class="d-logo-img d02"></div>
+                            <div class="d-logo-text">免费注册</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d03">
+                          <a href="">
+                            <div class="d-logo-img d03"></div>
+                            <div class="d-logo-text">APP下载</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d04">
+                          <a href="">
+                            <div class="d-logo-img d04"></div>
+                            <div class="d-logo-text">我的返水</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d05">
+                          <a href="">
+                            <div class="d-logo-img d05"></div>
+                            <div class="d-logo-text">我的优惠</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d06">
+                          <a href="">
+                            <div class="d-logo-img d06"></div>
+                            <div class="d-logo-text">寰宇浏览器</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d07">
+                          <a href="">
+                            <div class="d-logo-img d07"></div>
+                            <div class="d-logo-text">快速充值</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d08">
+                          <a href="">
+                            <div class="d-logo-img d08"></div>
+                            <div class="d-logo-text">代理加盟</div>
+                          </a>
+                        </div>
+                        <div class="d-logo-item d09">
+                          <a href="">
+                            <div class="d-logo-img d09"></div>
+                            <div class="d-logo-text">在线客服</div>
+                          </a>
+                        </div>
+                      </div>
+                      <div class="d-logo-btn">
+                        <a href="search.html">
+                          <div class="d-logo-btn-more">
+                            <!-- <img src="img/logo-dropdown/btn-more.png" alt=""> -->
+                          </div>
+                        </a>
+                      </div>
+                  </ul>
+              </div>
+            </li>
+          </div>
+
+          <div class="h-main-left">
+            <!-- <div class="top-lang">
+              <select name="lang" id="">
+                <option value="cn">
+                  <img src="/img/lang/cn.png" alt="" />简体中文
+                </option>
+                <option value="hk-ch">繁體中文</option>
+                <option value="hk-ch">English</option>
+              </select>
+            </div> -->
+            <!-- <div class="nav-top-g">
+              <div class="top-lang">
+                <span class="lang-wrap">
+                  <div id="ele-lang-wrap" class="ele-lang-wrap">
+                    <div class="ele-lang-title ele-lang-option">
+                      简体中文<span class="ele-lang-flag ele-lang-zh-tw"></span>
+                    </div>
+                    <div id="ele-lang-group" class="ele-lang-group">
+                      <a
+                        href="img/lang/cn.png"
+                        target="mem_index"
+                        title="繁體中文"
+                        class="ele-lang-option ele-lang-current"
+                        >繁體中文<span
+                          class="ele-lang-flag ele-lang-zh-tw"
+                        ></span></a
+                      ><a
+                        href="img/lang/cn.png"
+                        target="mem_index"
+                        title="简体中文"
+                        class="ele-lang-option"
+                        >简体中文<span
+                          class="ele-lang-flag ele-lang-zh-cn"
+                        ></span></a
+                      ><a href="img/lang/cn.png" target="mem_index" title="English" class="ele-lang-option">English<span class="ele-lang-flag ele-lang-en"></span
+                      ></a>
+                    </div>
+                  </div>
+                  <script>
+                    $(function () {
+                      var ele_lang_group = $("<div>")
+                          .append($("#ele-lang-group"))
+                          .html(),
+                        $miBody = $("body"),
+                        lang_group,
+                        langUp = "" || "",
+                        /* 改為從下往上開 */ langUpY = "" || 0,
+                        /* 從下往上開微調的距離 */ listWidth = "",
+                        /* 指定選單寬度 */ listPosition = "" || "left";
+                      /* 選單對齊方式 */ $miBody.prepend(ele_lang_group);
+                      lang_group = $("#ele-lang-group");
+                      /* 設定group 的寬度 */ lang_group.css(
+                        "width",
+                        listWidth
+                          ? listWidth
+                          : $("#ele-lang-wrap").width() -
+                              (lang_group.outerWidth() - lang_group.width())
+                      );
+                      var langAutoClose = function () {
+                        langCloseTimer = setTimeout(function () {
+                          lang_group.stop().slideUp("fast");
+                        }, 1000);
+                      };
+                      $("#ele-lang-wrap")
+                        .on("click", function () {
+                          var offset = $(this).offset();
+                          var center_set = $miBody.width() - $("body").width();
+                          center_set = center_set > 0 ? center_set / 2 : 0;
+                          var listHeight = $("#ele-lang-group").height(),
+                            obj_Left = offset.left + center_set,
+                            obj_Top = offset.top + $(this).height();
+                          if (langUp === "Y") {
+                            obj_Top = $(window).height() - offset.top + +langUpY;
+                          }
+                          var widthDiff = $(this).width() - lang_group.width();
+                          if (widthDiff !== 0) {
+                            if (listPosition === "center") {
+                              obj_Left = obj_Left + widthDiff / 2;
+                            }
+                            if (listPosition === "right") {
+                              obj_Left = obj_Left + widthDiff;
+                            }
+                          }
+                          var langStyle = { left: obj_Left };
+                          if (langUp === "Y") {
+                            langStyle.bottom = obj_Top;
+                          } else {
+                            langStyle.top = obj_Top;
+                          }
+                          if (lang_group.is(":hidden")) {
+                            lang_group
+                              .stop()
+                              .slideDown("fast")
+                              .css(langStyle)
+                              .on("mouseenter", function () {
+                                clearTimeout(langCloseTimer);
+                                $(this).stop(true, true).slideDown("100");
+                              });
+                          } else {
+                            lang_group.stop().slideUp("fast");
+                          }
+                        })
+                        .on("mouseleave", function () {
+                          langAutoClose();
+                        })
+                        .on("mouseenter", function () {
+                          if (typeof langCloseTimer != "undefined") {
+                            clearTimeout(langCloseTimer);
+                          }
+                        });
+                      lang_group.on("mouseleave", function () {
+                        langAutoClose();
+                      });
+                    });
+                  </script></span
+                >
+              </div>
+              <div class="top-hot-link">
+                <nav>
+                    <a href="#">18狂欢日 </a>
+                    <span style="padding: 0 2px;">|</span> 
+                    <a href="#"> 下载【0040刘览器】</a> 
+                    <span style="padding: 0 2px;">|</span> 
+                    <a href="#"> 借呗「全民福利」 </a> 
+                    <span style="padding: 0 2px;">|</span> 
+                    <a href="#"> 每天签到「独家」 </a>
+                    <span style="padding: 0 2px;">|</span> 
+                    <a href="#"> 超级VIP</a>
+                </nav>
+              </div>
+              
+            </div> -->
+            <div class="sitempa-nav">
+              <nav class="navbar">
+                <div class="btn-1-g">
+                    <a style="font-size: 14px; color: #2293f9; font-weight: bold;"  href="" class=" flex">
+                        首页 
+                        <div class="dropdown-icon">
+                          <div class="img-act"></div>
+                        </div>
+                    </a>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        电子游艺
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        棋牌游戏
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-poker.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        捕鱼游戏
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-fish.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        视讯直播
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-live.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        体育赛事
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-sport.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        电子竞技
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-esport.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                    <button class="d-btn">
+                        彩票游戏
+                        <div class="dropdown-icon d">
+                          <div class="img"></div>
+                        </div>
+                    </button>
+                    <div class="d-content">
+                        <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-lottery.png" alt="">
+                        </div>
+                        <div class="col-hr">
+                            <img src="img/line-col.png" alt="">
+                        </div>
+                        <div class="column02">
+                            <div class="game-plant-g flex">
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                <div class="game-plant-icon">
+                                    <img src="img/game-icon/nav-bbin-logo.png" alt="">
+                                    <div class="o-nav-item-text"> BBIN</div>
+                                </div>
+                                
+
+                            </div>
+                        </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="d-btn-g">
+                  <button class="d-btn pg">
+                      PG电子
+                      <div class="dropdown-icon d">
+                        <div class="img"></div>
+                      </div>
+                      <div class="img-gif">
+                        <img src="img/nav/hot-gif.gif" alt="">
+                      </div>
+                  </button>
+                  <!-- <div class="d-content">
+                      <div class="container Navrow">
+                        <div class="column01">
+                            <img src="img/nav-col-banner-lottery.png" alt="">
+                        </div>
+                      </div>
+                  </div> -->
+              </div>
+                
+              </nav>
+              <div class="bot-nav">
+                <div class="other-nav-g">
+                  <li class="nav-item member-dropdown og">
+                    <div class="o-nav-item o1 ps-r">
+                      <img class="nav-hot-icon" src="img/nav/hot-gif-1-2.gif" alt="" />
+                      <img src="img/o-icon/o-gift.png" alt="" />
+                      <div class="o-nav-item-text">优惠</div>
+                    </div>
+                    <div class="submenu submenu-promo">
+                        <ul class="submenu-items">
+                            <li class="dp-top-line">
+                              <img src="img/dp-member-top-line.png" alt="">
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img01"></div>
+                              <!-- <img src="img/member-nav/member-0040.png" alt=""> -->
+                              <a href="#" class="submenu-link">4005浏览器</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img02"></div>
+                              <!-- <img src="img/member-nav/member-task.png" alt=""> -->
+                              <a href="#" class="submenu-link">我的任务</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img03"></div>
+                              <!-- <img src="img/member-nav/member-task.png" alt=""> -->
+                              <a href="#" class="submenu-link">推荐赚钱</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img04"></div>
+                              <!-- <img src="img/member-nav/member-30day.png" alt=""> -->
+                              <a href="#" class="submenu-link">天天签到</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img05"></div>
+                              <!-- <img src="img/member-nav/member-8day.png" alt=""> -->
+                              <a href="#" class="submenu-link">逢8必发</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img06"></div>
+                              <!-- <img src="img/member-nav/member-redmoney.png" alt=""> -->
+                              <a href="#" class="submenu-link">天天抢红包</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img07"></div>
+                              <!-- <img src="img/member-nav/member-gift.png" alt=""> -->
+                              <a href="#" class="submenu-link">欢乐拆盲盒</a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img08"></div>
+                              <!-- <img src="img/member-nav/member-trophy.png" alt=""> -->
+                              <a href="#" class="submenu-link">周周挑战赛</a>
+                            </li>
+                            <li class="submenu-item flex right-nav">
+                              <div class="icon img09"></div>
+                              <!-- <img src="img/member-nav/member-money.png" alt=""> -->
+                              <a href="#" class="submenu-link">月月大返利</a>
+                            </li>
+                        </ul>
+                    </div>
+                  </li>
+                  <li class="nav-item member-dropdown og">
+                    <div class="o-nav-item o1">
+                      <img src="img/o-icon/o-crown.png" alt="" />
+                      <div class="o-nav-item-text"> 鸿利会</div>
+                    </div>
+                    <div class="submenu">
+                        <ul class="submenu-items">
+                            <li class="dp-top-line">
+                              <img src="img/dp-member-top-line.png" alt="">
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img02-1"></div>
+                              <a href="#" class="submenu-link">天天更新</a>
+                            </li>
+                            <li class="submenu-item flex right-nav">
+                              <div class="icon img02-2"></div>
+                              <a href="#" class="submenu-link">时时派彩</a>
+                            </li>
+                            <!-- <li class="submenu-item flex">
+                              <img src="img/member-nav/member-clock.png" alt="">
+                              <a href="#" class="submenu-link">时时派彩</a>
+                            </li> -->
+                        </ul>
+                    </div>
+                  </li>
+  
+                  <li class="nav-item member-dropdown og">
+                     <div class="o-nav-item o1">
+                      <img src="img/o-icon/o-deal.png" alt="" />
+                      <div class="o-nav-item-text"> 代理</div>
+                    </div>
+                  </li>
+                  
+                  <li class="nav-item member-dropdown og">
+                    <div class="o-nav-item o1">
+                        <img src="img/o-icon/o-call.png" alt="" />
+                        <div class="o-nav-item-text">  客服</div>
+                      </div>
+                      <div class="submenu submenu-promo">
+                        <ul class="submenu-items">
+                            <li class="dp-top-line">
+                              <img src="img/dp-member-top-line.png" alt="">
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img04-1"></div>
+                              <a href="#">
+                                <div class="submenu-link">7x24小时</div>
+                                <div class="submenu-s">在线客服</div>
+                              </a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img04-2"></div>
+                              <a href="#">
+                                <div class="submenu-link">7x24小时</div>
+                                <div class="submenu-s">备用客服</div>
+                              </a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img04-3"></div>
+                              <a href="#">
+                                <div class="submenu-link">意见回馈</div>
+                              </a>
+                            </li>
+                            <li class="submenu-item flex line right-nav">
+                              <div class="icon img04-4"></div>
+                              <a href="#">
+                                <div class="submenu-link">客服热线</div>
+                                <div class="submenu-s">400-681-7999</div>
+                              </a>
+                            </li>
+                            <li class="submenu-item flex right-nav">
+                              <div class="icon img04-5"></div>
+                              <a href="#">
+                                <div class="submenu-link">MChat客服</div>
+                                <div class="submenu-s">vnskf634</div>
+                              </a>
+                            </li>
+                        </ul>
+                    </div>
+                  </li>
+                                 
+                  <div class="d-btn-g o-nav-item">
+                    <div class="app-g">
+                      <img src="img/o-icon/o-app.png" alt="" />
+                      <div class="o-nav-item-text">APP</div>
+                    </div>
+                    <div class="d-content d-content-app">
+                        <div class="container-app">
+                          <div class="triangle">
+                            <img src="img/triangle-icon.png" alt="">
+                          </div>
+                        </div>
+                        
+                        <div class="container Navrow flex pt-30">
+                          <div class="col-app-01">
+                            <a href="#"><img src="img/nav/app-img-0040.png" alt=""></a>
+                          </div>
+                          <div class="col-hr-app pd-10">
+                            <img src="img/nav/app-img-hr.png" alt="">
+                          </div>
+                          <div class="col-app-01">
+                            <a href="#"><img src="img/nav/app-img-browser.png" alt=""></a>
+                          </div>
+                          <div class="col-hr-app pd-10">
+                            <img src="img/nav/app-img-hr.png" alt="">
+                          </div>
+                          <div class="col-app-01">
+                            <a href="#"><img src="img/nav/app-img-og-app.png" alt=""></a>
+                          </div>
+                          <div class="col-hr-app pd-10">
+                            <img src="img/nav/app-img-hr.png" alt="">
+                          </div>
+                          <div class="col-app-01">
+                            <a href="#"><img src="img/nav/app-img-ios-app.png" alt=""></a>
+                          </div>
+                        </div>
+                    </div>
+                  </div>
+  
+                  <!--                 
+                  <div class="o-nav-item">
+                      <img src="img/o-icon/o-crown.png" alt="" />
+                      <div class="o-nav-item-text"> 鸿利会</div>
+                  </div>
+                  <div class="o-nav-item">
+                      <img src="img/o-icon/o-deal.png" alt="" />
+                      <div class="o-nav-item-text"> 代理</div>
+                  </div>
+                  <div class="o-nav-item">
+                      <img src="img/o-icon/o-gift.png" alt="" />
+                      <div class="o-nav-item-text"> 优惠</div>
+                  </div>
+                  <div class="o-nav-item">
+                      <img src="img/o-icon/o-call.png" alt="" />
+                      <div class="o-nav-item-text"> 客服</div>
+                  </div>
+                  <div class="o-nav-item">
+                      <img src="img/o-icon/o-app.png" alt="" />
+                      <div class="o-nav-item-text" >APP</div>
+                  </div> -->
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="h-main-logo">
+            <div class="logo-img">
+              <img src="img/main-logo.png" alt="" />
+            </div>
+          </div> -->
+          <div class="h-main-right">
+            <div class="bot-nav">
+              
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <script>
+      window.onscroll = function() {myFunction()};
+      
+      var header = document.getElementById("myHeader");
+      var sticky = header.offsetTop;
+      
+      function myFunction() {
+        if (window.pageYOffset > sticky) {
+          header.classList.add("sticky");
+        } else {
+          header.classList.remove("sticky");
+        }
+      }
+    </script>
+
+    <!-- swiper-banner -->
+    <div class="swiper mySwiper">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <img src="img/slider01.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider01.jpg" alt="" />
+        </div>
+        <div class="swiper-slide">
+          <img src="img/slider01.jpg" alt="" />
+        </div>
+      </div>
+      <div class="swiper-pagination"></div>
+    </div>
+
+    <!-- news-post-test -->
+    <div id="newSection2" class="newSection" style="position: relative; top: auto; width: 100%;">
+      <div class="newsBox clearfix">
+          <dl>
+              <dt class="newsbg"><img src="img/news_icon.png" alt="">最新公告 : </dt>
+              <dd class="bd">
+                  <div class="tempWrap" style="overflow:hidden; position:relative; width:962px"><ul class="infoList" style="width: 4810px; position: relative; overflow: hidden; padding: 0px; margin: 0px; left: -1931px;"><li class="clone" style="float: left; width: 962px;">澳门金沙集团提醒您，为了您的账户资金安全考虑，请广大会员不定期修改登录／取款密码，保证您的账户信息安全，客户第一......</li>
+                      <li style="float: left; width: 962px;">澳门金沙集团提醒您，为了您的账户资金安全考虑，请广大会员不定期修改登录／取款密码，保证您的账户信息安全，客户第一......</li>
+                      <li style="float: left; width: 962px;">澳门金沙集团提醒您，为了您的账户资金安全考虑，请广大会员不定期修改登录／取款密码，保证您的账户信息安全，客户第一......</li>
+                      <li style="float: left; width: 962px;">澳门金沙集团提醒您，为了您的账户资金安全考虑，请广大会员不定期修改登录／取款密码，保证您的账户信息安全，客户第一......</li>
+                  <li class="clone" style="float: left; width: 962px;">澳门金沙集团提醒您，为了您的账户资金安全考虑，请广大会员不定期修改登录／取款密码，保证您的账户信息安全，客户第一......</li></ul></div>
+              </dd>
+          </dl>
+          <div class="comLink">
+            <a href="#">
+              <!-- <img src="img/new-cs-icon.png" alt=""> -->
+              <div class="comLink-img"></div>
+            </a>
+          </div>
+      </div>
+    </div>
+
+    <div class="f-link-g" >
+      <div class="container flex">
+        <div class="f-link-item">
+          <a href="#">
+            <div class="f-link-img01"></div>
+          </a>
+        </div>
+        <div class="f-link-item">
+          <a href="#">
+            <div class="f-link-img02"></div>
+          </a>
+        </div>
+        <div class="f-link-item">
+          <a href="#">
+            <div class="f-link-img03"></div>
+          </a>
+        </div>
+        <div class="f-link-item">
+          <a href="#">
+            <div class="f-link-img04"></div>
+          </a>
+        </div>
+      </div>
+    </div>
+    <div class="gaming-banner-setion">
+      <div class="container">
+        <div class="gaming-h2">
+          <img src="img/gaming-h2.png" alt="" />
+        </div>
+
+        <div class="gaming-banner-g">
+        </div>
+
+        <div class="gaming-banner-g">
+          <div class="g-banner-left" style="margin-right: 8px">
+            <div class="g-banner-top">
+              <div class="slot-g">
+                <!-- <img src="img/slot-game.jpg" alt="" /> -->
+                <figure>
+                  <img src="img/slot-game.jpg">
+                  <figcaption>
+                    <div class="game-info-g">
+                      <div class="game-info-title">电子游艺</div>
+                      <div class="game-info-p"> 
+                      小娱乐，大梦想，汇聚世界顶级电子游艺，<br>	  				  
+                      画质高清，玩法多样，亿元累计彩池，大奖一触即发！
+                    </div>
+                      <div class="game-info-btn">
+                        <a href="#">
+                          <button>
+                            开始游戏
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <div class="game-icon-g">
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img"></div>
+                      <div class="slot-name">PG电子</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img bb"></div>
+                      <div class="slot-name">BB电子</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img mg"></div>
+                      <div class="slot-name">MG电子</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img jdb"></div>
+                      <div class="slot-name">JDB电子</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img cq9"></div>
+                      <div class="slot-name">CQ9电子</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img ag"></div>
+                      <div class="slot-name">AG电子</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img pt"></div>
+                      <div class="slot-name">TP电子</div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+            <div class="g-banner-bot flex">
+              <div class="sport-g" style="margin-right: 8px">
+                <!-- <img src="img/sport-game.jpg" alt="" /> -->
+                <figure class="figure-s">
+                  <img src="img/sport-game.jpg">
+                  <figcaption class="figure-s">
+                    <div class="game-info-g">
+                      <div class="game-info-title">体育电竞</div>
+                      <div class="game-info-p"> 
+                        网络最新热门赛事供您投注， <br>  
+                        点燃您的激情
+                    </div>
+                      <div class="game-info-btn">
+                        <a href="#">
+                          <button>
+                            开始游戏
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <div class="game-icon-g">
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img crsport"></div>
+                      <div class="slot-name">皇冠体育</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img sasport"></div>
+                      <div class="slot-name">沙巴体育</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img bbsport"></div>
+                      <div class="slot-name">BB体育</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bingo">
+                <!-- <img src="img/sport-game.jpg" alt="" /> -->
+                <figure class="figure-s">
+                  <img src="img/lottery-game.jpg">
+                  <figcaption class="figure-s">
+                    <div class="game-info-g">
+                      <div class="game-info-title">彩票乐透</div>
+                      <div class="game-info-p"> 
+                        彩种丰富开奖迅速，<br> 
+                        分分钟爆大奖
+                    </div>
+                      <div class="game-info-btn">
+                        <a href="#">
+                          <button>
+                            开始游戏
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <div class="game-icon-g">
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img bblottery"></div>
+                      <div class="slot-name">BB彩票</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img xxblottery"></div>
+                      <div class="slot-name">XBB彩票</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img vrlottery"></div>
+                      <div class="slot-name">VR彩票</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="g-banner-right" style="margin-right: 8px">
+            <div class="g-banner-top flex">
+              <div class="sport-g" style="margin-right: 8px">
+                <!-- <img src="img/sport-game.jpg" alt="" /> -->
+                <figure class="figure-s">
+                  <img src="img/fishing-game.jpg">
+                  <figcaption class="figure-s">
+                    <div class="game-info-g">
+                      <div class="game-info-title">捕鱼达人</div>
+                      <div class="game-info-p"> 
+                        史上最巨渔场邀您一起来渔乐<br>   
+                        大鱼满屏一打就爆机
+                    </div>
+                      <div class="game-info-btn">
+                        <a href="#">
+                          <button>
+                            开始游戏
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <div class="game-icon-g">
+                  <div class="game-item s">
+                    <a href="#">
+                      <div class="game-item-img jdbgodfish"></div>
+                      <div class="slot-name">JDB财神捕鱼</div>
+                    </a>
+                  </div>
+                  <div class="game-item s">
+                    <a href="#">
+                      <div class="game-item-img jdb5fish"></div>
+                      <div class="slot-name">JDB五龙捕鱼</div>
+                    </a>
+                  </div>
+                  <div class="game-item s">
+                    <a href="#">
+                      <div class="game-item-img jdbfgfish-2"></div>
+                      <div class="slot-name">FG雷霆战警</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="bingo">
+                <!-- <img src="img/sport-game.jpg" alt="" /> -->
+                <figure class="figure-s">
+                  <img src="img/casino-game.jpg">
+                  <figcaption class="figure-s">
+                    <div class="game-info-g">
+                      <div class="game-info-title">视讯直播</div>
+                      <div class="game-info-p"> 
+                        实体赌场真人荷官现场发牌 <br>
+                        给您身临其境的逼真感受
+                    </div>
+                      <div class="game-info-btn">
+                        <a href="#">
+                          <button>
+                            开始游戏
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <div class="game-icon-g">
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img bb"></div>
+                      <div class="slot-name">BB视讯</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img ag"></div>
+                      <div class="slot-name">AG视讯</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img ab"></div>
+                      <div class="slot-name">AB视讯</div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+            <div class="g-banner-bot">
+              <div class="slot-g">
+                <!-- <img src="img/slot-game.jpg" alt="" /> -->
+                <figure>
+                  <img src="img/poker-game.jpg">
+                  <figcaption>
+                    <div class="game-info-g">
+                      <div class="game-info-title">棋牌对战</div>
+                      <div class="game-info-p"> 
+                        采用业界领先无限真随机发牌，多款棋牌任君选， <br>
+                        好友相约尽情对垒，弛聘牌场，开启棋牌游戏新篇章！
+                    </div>
+                      <div class="game-info-btn">
+                        <a href="#">
+                          <button>
+                            开始游戏
+                          </button>
+                        </a>
+                      </div>
+                    </div>
+                  </figcaption>
+                </figure>
+                <div class="game-icon-g">
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img ky"></div>
+                      <div class="slot-name">开元棋牌</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img bb"></div>
+                      <div class="slot-name">BB棋牌</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img jdbfgfish"></div>
+                      <div class="slot-name">FG棋牌</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img jdb"></div>
+                      <div class="slot-name">JDB棋牌</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img leg"></div>
+                      <div class="slot-name">乐游棋牌</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img happy"></div>
+                      <div class="slot-name">欢乐棋牌</div>
+                    </a>
+                  </div>
+                  <div class="game-item">
+                    <a href="#">
+                      <div class="game-item-img mt"></div>
+                      <div class="slot-name">MT棋牌</div>
+                    </a>
+                  </div>
+
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- download-section -->
+    <div id="index" class="maindownload">
+      <div id="container">
+          <!-- Main
+      ============================================-->
+          <!--JS_0921-->
+          <div id="main">
+              <!--TYC_0921-->
+              <div class="section03">
+                  <!-- 頁籤 tab-2 start  -->
+                  <div class="container-1">
+                      <div class="tab-2">
+                          <ul class="wow tab-2-title flip-in-x" data-wow-delay="1">
+                            <div class="tab-switch-g flex">
+                              <li data-li="1"><a class="tab-2-title1" href="javascript:return false;"></a></li>
+                              <li data-li="2"><a class="tab-2-title2" href="javascript:return false;"></a></li>
+                              <li data-li="3"><a class="tab-2-title3" href="javascript:return false;"></a></li>
+                            </div>
+                          </ul>
+                          <div class="tab-2-content" data-wow-delay=".6s">
+                              <div class="tab-2-panel">
+                                  <div class="txtBox">
+                                      <div class="ttl">
+                                        <img src="img/download/download-app-title.png" alt="">
+                                        <p class="ttl-p">
+                                          全球首家一体化娱乐原生APP，尽显流畅，完美操作。汇聚全网最丰富的电子、棋牌、捕鱼、视讯、电竞、体育、彩票游戏，最新最全娱乐项目尽在掌中体验扫码下载，即刻拥有！
+                                        </p>
+                                      </div>
+                                      <!-- <div class="app-info1">
+                                        <p style="width: 450px; line-height: 20px">
+                                          全球首家一体化娱乐原生APP，尽显流畅，完美操作。汇聚全网最丰富的电子、棋牌、捕鱼、视讯、电竞、体育、彩票游戏，最新最全娱乐项目尽在掌中体验扫码下载，即刻拥有！
+                                        </p>
+                                      </div>  -->
+                                      <div class="TextEditor">
+                                          <div class="qr_url">
+                                              <div>
+                                                  <div class="qrimg"><img src="img/download/qrcode-login.png" alt="">
+                                                  </div>
+                                                  
+                                                  <span>扫码下载APP</span><br> <span style="font-size: 12px;">支持iOS & Android 全部移动设备</span> 
+                                              </div>
+                                              <div class="divi-line l01" >
+                                                <img src="img/download/divi-line.png" alt="">
+                                              </div>
+                                              <div>
+                                                  <div class="qrimg"><img src="img/download/first_mobile_h5.png" alt="">
+                                                  </div>
+                                                  <span>手机免下载访问</span><br> <span style="font-size: 12px;">4005.com</span>
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="txtimg">
+                                      <!-- <img class="appLoad1-0" src="img/download/app-mockup.png" alt=""> -->
+                                      <div class="download-item-right">
+                                        <!-- <div class="app-mockup swiper-phone">
+                                          <div class="swiper mySwiper ">
+                                            <div class="swiper-wrapper">
+                                              <div class="swiper-slide">
+                                                <img src="img/download/slider-phone01.png" style="width: auto; height:auto" alt="" />
+                                              </div>
+                                              <div class="swiper-slide">
+                                                <img src="img/download/slider-phone01.png" style="width: auto; height:auto" alt="" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                          </div>
+                                        </div> -->
+                                        <div class="swiper mySwiper phone">
+                                          <div class="swiper-wrapper phone">
+                                            <div class="swiper-slide ">
+                                              <img src="img/download/slider-phone01.png" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                              <img src="img/download/slider-phone01.png" alt="" />
+                                            </div>
+                                            <div class="swiper-slide">
+                                              <img src="img/download/slider-phone01.png" alt="" />
+                                            </div>
+                                          </div>
+                                          <div class="swiper-pagination"></div>
+                                        </div>
+
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="tab-2-panel">
+                                  <div class="txtBox">
+                                      <div class="ttl">
+                                        <img src="img/download/download-browser-title.png" alt="">
+                                        <p class="ttl-p" style="color: #b0b4b3; font-size: 13px; line-height: 20px;">
+                                          永利娱乐场专为贵宾量身打造最适合您在永利娱乐场游戏使用的浏览器，搭载云端世界虚拟技术，操作简单，运行效能高。安全性绝佳加密功能让所有访问的网页内容都受到保护，超越国际金融网路传输安全的标准。最佳隐私保护浏览记录和访问历史在每次关掉浏览器的同时将自动删除个人隐私绝不暴露！
+                                        </p>
+                                      </div>
+                                      <!-- <div class="app-info1">
+                                        <p style="width: 450px; line-height: 20px">
+                                          全球首家一体化娱乐原生APP，尽显流畅，完美操作。汇聚全网最丰富的电子、棋牌、捕鱼、视讯、电竞、体育、彩票游戏，最新最全娱乐项目尽在掌中体验扫码下载，即刻拥有！
+                                        </p>
+                                      </div>  -->
+                                      <div class="TextEditor">
+                                          <div class="qr_url" style="margin-top: 30px;">
+                                              <div>
+                                                  <div class="qrimg">
+                                                    <a href=""><img src="img/download/browser-img01.png" alt=""></a>
+                                                  </div>
+                                                  <!-- <span>扫码下载APP</span><br> <span style="font-size: 12px;">支持iOS & Android 全部移动设备</span>  -->
+                                              </div>
+                                              <div class="divi-line" style="opacity: 0%;">
+                                                <img src="img/download/divi-line.png" alt="">
+                                              </div>
+                                              <div>
+                                                  <!-- <div class="qrimg"><img src="img/download/first_mobile_h5.png" alt="">
+                                                  </div> -->
+                                                  <div class="qrimg">
+                                                    <img src="img/download/browser-img01-qrcode.png" alt="">
+                                                  </div>
+                                                  <!-- <span>手机免下载访问</span><br> <span style="font-size: 12px;">4005.com</span> -->
+                                              </div>
+                                          </div>
+                                      </div>
+                                  </div>
+                                  <div class="txtimg">
+                                      <!-- <img class="appLoad1-0" src="img/download/app-mockup.png" alt=""> -->
+                                      <div class="download-item-right browser">
+                                        <div class="app-mockup swiper-phone browser">
+                                          <!-- <div class="swiper mySwiper ">
+                                            <div class="swiper-wrapper">
+                                              <div class="swiper-slide">
+                                                <img src="img/download/slider-phone01.png" style="width: auto; height:auto" alt="" />
+                                              </div>
+                                              <div class="swiper-slide">
+                                                <img src="img/download/slider-phone01.png" style="width: auto; height:auto" alt="" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                          </div> -->
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                              <div class="tab-2-panel">
+                                  <div class="txtBox">
+                                      <div class="ttl">
+                                        <img src="img/download/0040-left-img.png" alt="">
+                                        <!-- <p class="ttl-p" ></p> -->
+                                      </div>
+                                      
+                                  </div>
+                                  <div class="txtimg">
+                                      <!-- <img class="appLoad1-0" src="img/download/app-mockup.png" alt=""> -->
+                                      <div class="download-item-right b0040">
+                                        <img src="img/download/0040-right-img.png" alt="" >
+                                        <div class="app-mockup swiper-phone">
+                                          <!-- <div class="swiper mySwiper ">
+                                            <div class="swiper-wrapper">
+                                              <div class="swiper-slide">
+                                                <img src="img/download/slider-phone01.png" style="width: auto; height:auto" alt="" />
+                                              </div>
+                                              <div class="swiper-slide">
+                                                <img src="img/download/slider-phone01.png" style="width: auto; height:auto" alt="" />
+                                              </div>
+                                            </div>
+                                            <div class="swiper-pagination"></div>
+                                          </div> -->
+                                        </div>
+                                      </div>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                  </div>
+
+                  <script>
+                      var currTab = 0;
+                      $('.tab-2 li:first').addClass('tab-2active');
+                      $('.tab-2 .tab-2-panel:first').fadeIn();
+                      $('.tab-2 li').click(function() {
+                          $('.tab-2 li').removeClass('tab-2active');
+                          $('.tab-2 .tab-2-panel').hide();
+                          $(this).addClass('tab-2active');
+                          currTab = $(this).attr('data-li') - 1;
+                          $('.tab-2 .tab-2-panel:eq(' + currTab + ')').fadeIn(300);
+                          $('.tab-2 .tab-2-panel:eq(' + currTab + ') .txtimg').addClass('moveright').siblings().removeClass('moveright');;
+                          $('.tab-2 .tab-2-panel:eq(' + currTab + ') .txtBox').addClass('moveleft').siblings().removeClass('moveleft');;
+                      })
+                  </script>
+
+              </div>
+          </div>
+      </div>
+    </div>
+
+    <!-- dashboard-section -->
+    <div class="dashboard-section" >
+       <div class="container">
+        <div class="gaming-h2">
+          <div class="feature-titile"><img src="img/feature/feature-h2.png" alt=""></div>
+        </div>
+        <div class="feature-g-all">
+          <div class="feature-g">
+            <div class="feature-item">
+              <div class="feature-icon"><img src="img/feature/convenient-icon.png" alt=""></div>
+              <div class="feature-i-text-g">
+                <div class="feature-title"><h3>便捷的银行服务</h3> </div>
+                <div class="feature-dis">目前我们支付机构有100家,全面支持各大银行存款、第三方以及支付宝、微信、虚拟货币等多种支付平台</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><img src="img/feature/deposit-icon.png" alt=""></div>
+              <div class="feature-i-text-g">
+                <div class="feature-title"><h3>存取款流程优化</h3> </div>
+                <div class="feature-dis">存款到帐平均30S到帐，取款90S到帐,重新定义服务流程、倾听每个用户心声，竭力寻求最出色</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><img src="img/feature/credit-icon.png" alt=""></div>
+              <div class="feature-i-text-g">
+                <div class="feature-title"><h3>用心服务 信誉保证</h3> </div>
+                <div class="feature-dis">凭藉集合世界级的博彩资讯专家、丰富经验的服务团队、先进的软硬件开发人员建立出Wynn·Macau永利娱乐场全面而完善的组织体系</div>
+              </div>
+            </div>
+            <div class="feature-item">
+              <div class="feature-icon"><img src="img/feature/fair-icon.png" alt=""></div>
+              <div class="feature-i-text-g">
+                <div class="feature-title"><h3>公平公正 安全稳定</h3> </div>
+                <div class="feature-dis">Wynn·Macau永利娱乐场独家开发，采用128位SSL加密技术和严格的安全管理体系，确保客户安全得到最完善的保障</div>
+              </div>
+            </div>
+          </div>
+          <div class="feature-g-dashboard" >
+            <div class="dashboard-item" >
+              <div class="container-circle-box">
+                <div class="circular-progress">
+                  <div class="value-container">0</div>
+                  <div class="value-container-text" >秒</div>
+                </div>
+              </div>
+              <div class="dashboard-item-text">
+                平均取款时间
+              </div>
+            </div>
+            <div class="dashboard-item">
+              <div class="container-circle-box">
+                <div class="circular-progress two">
+                  <div class="value-container two">0</div>
+                  <div class="value-container-text" >秒</div>
+                </div>
+              </div>
+              <div class="dashboard-item-text">
+                平均存款时间
+              </div>
+            </div>
+            <div class="dashboard-item">
+              <div class="container-circle-box">
+                <div class="circular-progress three">
+                  <div class="value-container three">0</div>
+                  <div class="value-container-text" >+</div>
+                </div>
+              </div>
+              <div class="dashboard-item-text">
+                合作游戏平台
+              </div>
+            </div>
+            <div class="dashboard-item">
+              <div class="container-circle-box">
+                <div class="circular-progress four">
+                  <div class="value-container four">0</div>
+                  <div class="value-container-text" >+</div>
+                </div>
+              </div>
+              <div class="dashboard-item-text">
+                合作支付平台
+              </div>
+            </div>
+          </div>
+          
+        </div>
+        
+       </div>
+    </div>
+
+
+    <footer>
+      <div class="container">
+        <div class="vender-logo-g flex">
+          <div class="vender-logo">
+            <img src="img/footer/vender/vender-g.png" alt="" />
+          </div>
+        </div>
+        <hr style="border: 1px solid #4d5967; margin: 0" />
+        <!-- <div class="divi-line">
+                <img src="img/footer/divi-line-f.png" alt="">
+            </div> -->
+        <div class="footer-info">
+          <div class="sitemap-link-group">
+            <nav>
+              <a href="#">关于我们</a>
+              <a href="#">联络我們</a>
+              <a href="#">代理合作</a>
+              <a href="#">存款帮助</a>
+              <a href="#">取款帮助</a>
+              <a href="#">常见问题</a>
+            </nav>
+          </div>
+        </div>
+        <!-- <hr style="border: 1px solid #4d5967; margin: 0" /> -->
+
+        <!-- <div class="divi-line">
+                <img src="/img/footer/divi-line-f.png" alt="">
+            </div> -->
+        <div class="footer-lincense">
+          <div class="licence-group-g flex">
+            <div class="licence-item">
+              <div class="licence-item-img"><div class="img01"></div></div>
+              <!-- <img src="img/footer/license/lincense01.png" alt="" /> -->
+              <p>澳门特别行政区政府网投牌照</p>
+            </div>
+            <div class="licence-item">
+              <div class="licence-item-img"><div class="img02"></div></div>
+              <!-- <img src="img/footer/license/lincense02.png" alt="" /> -->
+              <p>马耳他博彩牌照（MGA）认证</p>
+            </div>
+            <div class="licence-item">
+              <div class="licence-item-img"><div class="img03"></div></div>
+              <!-- <img src="img/footer/license/lincense03.png" alt="" /> -->
+              <p>英国GC监督委员会</p>
+            </div>
+            <div class="licence-item">
+              <div class="licence-item-img"><div class="img04"></div></div>
+              <!-- <img src="img/footer/license/lincense04.png" alt="" /> -->
+              <p>英属维尔京群岛（BVI）认证</p>
+            </div>
+            <div class="licence-item">
+              <div class="licence-item-img"><div class="img05"></div></div>
+              <!-- <img src="img/footer/license/lincense05.png" alt="" /> -->
+              <p>GamCare官方安全赌博标准</p>
+            </div>
+          </div>
+        </div>
+        <hr style="border: 1px solid #4d5967; margin: 0" />
+
+        <!-- <div class="divi-line">
+                <img src="/img/footer/divi-line-f.png" alt="">
+            </div> -->
+        <div class="copyright">
+          Wynn·Macau永利娱乐场所提供的产品和服务，是由澳门特别行政区 The Macao
+          Special Administrative
+          Region.授权和监管。选择我们，您将拥有可靠的资金保障和优质的服务。
+          <br />
+          Copyright © Wynn·Macau永利娱乐场 Reserved 
+          <!--   wynn datetime -->
+          <!-- <div class="date-time"></div> -->
+            <!-- <div class="date_time-icon">
+              <img src="img/date_time-icon.png" alt="">
+            </div> -->
+            
+            <span>美東時間 - </span> <span id="current_date"></span>
+            
+          <script> 
+            
+            var day_list = ['日', '一', '二', '三', '四', '五', '六'];
+            var date = new Date();
+            var day = date.getDay(); // or "new Date().getDay()";
+
+            var time = new Date();
+            var YYYY = time.getFullYear();
+            var MM = time.getMonth() + 1;
+            var DD = time.getDate();
+            var HH = time.getHours();
+            var mm = time.getMinutes();
+            var ss = time.getSeconds();
+            var dateTime = YYYY + '-' + MM + '-' + DD + day_list[day] + ' ' + HH + ':' + mm + ':' + ss;
+            document.getElementById("current_date").innerHTML = dateTime;
+            
+          </script>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
+    <!-- <script>
+      document.getElementById("current_date").innerHTML = Date();
+    </script> -->
+
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
+
+    <!-- Initialize Swiper -->
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        pagination: {
+          el: ".swiper-pagination",
+        },
+        autoplay: {
+          delay: 5000,
+        },
+      });
+    </script>
+
+    <!-- figure-hover -->
+    <script>
+      $('figure').on('mouseenter mouseleave', hoverDirection);
+
+        function hoverDirection(event) {
+          var $overlay = $(this).find('figcaption'),
+              side = getMouseDirection(event),
+              animateTo,
+              positionIn = {
+                top: '0%',
+                left: '0%'
+              },
+              positionOut = (function() {
+                switch(side) {
+                  case 0:  return { top: '-100%', left:    '0%' }; break;
+                  case 1:  return { top:    '0%', left:  '100%' }; break;
+                  case 2:  return { top:  '100%', left:    '0%' }; break;
+                  default: return { top:    '0%', left: '-100%' }; break;
+                }
+              })();
+          if ( event.type === 'mouseenter' ) {
+            animateTo = positionIn;
+            $overlay.css(positionOut);
+          } else {
+            animateTo = positionOut;
+          }
+          $overlay.stop(true).animate(animateTo, 200, 'linear');
+        }
+
+        function getMouseDirection(event) {
+          var $item = $(event.currentTarget),
+              offset = $item.offset(),
+              w = $item.outerWidth(),
+              h = $item.outerHeight(),
+              x = (event.pageX - offset.left - w / 2) * ((w > h) ? h / w: 1),
+              y = (event.pageY - offset.top - h / 2) * ((h > w) ? w / h: 1),
+              direction = Math.round((Math.atan2(y, x) * (180 / Math.PI) + 180) / 90  + 3) % 4;
+          return direction;
+        }
+    </script>
+
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <script src="js/jquery.backstretch.js"></script>
+    <script src="js/common.js"></script>
+
+    <script type="text/javascript">
+      $(function() {
+          $(".mainImg .foo").backstretch([
+              "img/slider01.jpg",
+              "img/slider01.jpg"
+          ], {
+              fade: 750,
+              duration: 4000
+          });
+          $(".mainImg .foo").on("backstretch.before", function(e, instance, index) {
+              $('.mainImg .foopage a:eq(' + index + ')').addClass('selected').siblings('a').removeClass('selected');
+          });
+          $('.mainImg .foopage a').click(function() {
+              var index = $(this).index();
+              $(".mainImg .foo").backstretch('show', index);
+              return false;
+          });
+
+          $('.section02 .tabPanel').hide();
+          $('.section02 .tabPanel').eq(0).show();
+
+          $('.section02 .tabNavi li a').hover(function() {
+              var ind = $(this).parent('li').index();
+              $(this).parent('li').addClass('on').siblings().removeClass('on');
+              $('.section02 .tabPanel').hide();
+              $('.section02 .tabPanel:eq(' + ind + ')').show();
+              return false;
+          });
+      })
+    </script>
+
+    <!-- 跑馬燈js -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init();
+    </script>
+    <script src="js/jquery.SuperSlide.2.1.1.js"></script>
+    <!-- <script src="js/jquery.backstretch.js"></script> -->
+    <script src="js/common.js"></script>
+    <script src="js/progress.js"></script>
+    
+  </body>
+</html>
